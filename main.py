@@ -3,7 +3,6 @@ import os
 import requests
 from urllib.parse import urlparse
 from dotenv import load_dotenv
-load_dotenv()
 
 
 def count_clicks(token, target_url):
@@ -63,6 +62,7 @@ def is_bitlink(token, target_url):
 
 
 def main():
+    load_dotenv()
     parser = argparse.ArgumentParser()
     parser.add_argument("url", help="Enter URL for compress or bitlink")
     args = parser.parse_args()
